@@ -1,0 +1,15 @@
+# Exported from Render on 2025-10-07T12:31:28Z
+version: "1"
+services:
+- type: web
+  name: hmdm-server
+  runtime: docker
+  repo: https://github.com/devanshm05/hmdm-server
+  plan: free
+  envVars:
+  - key: DATABASE_URL
+    sync: false
+  region: singapore
+  dockerContext: .
+  dockerfilePath: ./Dockerfile
+  autoDeployTrigger: commit
